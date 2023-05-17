@@ -1,0 +1,2 @@
+# terraform-imgs
+GPT APIを利用してterraformコードからMERMAIDコードを生成して更新する
