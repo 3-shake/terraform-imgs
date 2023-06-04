@@ -1,12 +1,12 @@
 # terraform-imgs
 
-## What is terraform-imgs
-A utility to generate MERMAID code from terraform code using OPENAI API.
+## 概要
+OPENAI APIを利用してterraformコードからMERMAIDコードを生成します。
 
-## Installlation
+## インストール
 TBD
 
-## Usage
+## 使用方法
 
 ```bash
 $ terraform-imgs --help
@@ -28,26 +28,27 @@ Flags:
 Use "terraform-imgs [command] --help" for more information about a command.
 ```
 
-### Preparation
-Set the environment variable `OPENAI_API_KEY` to the API key of the GPT API.
+### 事前準備
+環境変数`OPENAI_API_KEY`にGPT APIのAPIキーを設定してください。
 
 ```
 export OPENAI_API_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx >> ~/.bash_profile
 ```
 
 
-### Output to stdout
+### 標準出力
 
 ```bash
 $ terraform-imgs mermaid ./path/to/terraform-root
 ```
 
-### Writing to md files
+### ファイルへの書き込み
 
 ```bash
 $ terraform-imgs mermaid ./path/to/terraform-root -o ./path/to/README.md
 ```
-The mermaid code block is inserted between the following comment-outs. If it is not mentioned, it will be added to the end of the file.
+mermaidコードブロックは以下のコメントアウトの間に挿入されます。記載がない場合はファイル末尾へ追記されます。
+
 ```md
 <!-- BEGIN_TF_IMGS -->
 mermaid code block
@@ -57,6 +58,6 @@ mermaid code block
 
 ## Notes
 
-- The GPT API is used to generate the MERMAID code; API keys are the user's own, so API usage fees apply(https://openai.com/pricing).
-  - Also, the API has a token limit, so it may not work for large terraforms.
-- Please be sure to check the output results and modify them accordingly.
+- MERMAIDコードの生成にはGPT APIを利用しています。APIキーは利用者自身のものを利用するためAPI利用料金が発生します(https://openai.com/pricing)。
+  - また、token制限がAPIには存在するため巨大なterraformの場合動作しない場合があります。
+- あくまでもAIによる作図補助ツールであるため利用の際は必ず出力結果を確認し、適宜修正を行ってください。
