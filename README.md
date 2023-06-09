@@ -1,7 +1,7 @@
 # terraform-imgs
 
 ## What is terraform-imgs
-A utility to generate MERMAID code from terraform code using OPENAI API.
+A utility to generate MERMAID code from terraform code using OpenAI API.
 
 ## Installlation
 TBD
@@ -10,7 +10,7 @@ TBD
 
 ```bash
 $ terraform-imgs --help
-A utility to generate MERMAID code from terraform code using GPT API.
+A utility to generate MERMAID code from terraform code using OpenAI API.
 
 Usage:
   terraform-imgs [command]
@@ -29,7 +29,7 @@ Use "terraform-imgs [command] --help" for more information about a command.
 ```
 
 ### Preparation
-Set the environment variable `OPENAI_API_KEY` to the API key of the GPT API.
+Set the environment variable `OPENAI_API_KEY` to the API key of the OpenAI API.
 
 ```
 export OPENAI_API_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx >> ~/.bash_profile
@@ -57,6 +57,6 @@ mermaid code block
 
 ## Notes
 
-- The GPT API is used to generate the MERMAID code; API keys are the user's own, so API usage fees apply(https://openai.com/pricing).
+- The OpenAI API is used to generate the MERMAID code; API keys are the user's own, so API usage fees apply(https://openai.com/pricing).
   - Also, the API has a token limit, so it may not work for large terraforms.
 - Please be sure to check the output results and modify them accordingly.
